@@ -13,17 +13,17 @@ export default function MainPage() {
 
     return (
         <div className="box">
-            <h1>
+            <div className="header">
                 KanaFlash ✨
-            </h1>
+            </div>
 
-            <div>
-                <button
+            <div className="content main-menu">
+                <button className="btn-main"
                     onClick={goToHiraganaFlash}
                 >
                     히라가나 외우기
                 </button>
-                <button
+                <button className="btn-main"
                     onClick={goToKatakanaFlash}
                 >
                     가타카나 외우기

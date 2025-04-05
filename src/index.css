@@ -76,23 +76,33 @@ button:focus-visible {
 
 .box {
   height: 100vh;
+  @apply py-8 px-4;
 }
 
 .header {
   /* text */
-  @apply text-center font-bold text-[1rem];
+  @apply text-center font-bold text-[1rem] grid my-2;
 }
 
-.card {
+.content {
   /* layout */
-  @apply p-[6vh] my-[20vh];
+  @apply my-[10vh];
 
   /* text */
   @apply text-center font-bold text-[3rem];
-
-  /* decoration */
-  @apply rounded-md bg-[#1a1a1a];
 }
+
+.main-menu {
+  @apply grid grid-cols-1 gap-1;
+}
+
+.card {
+  /* decoration */
+  @apply rounded-lg bg-[#1a1a1a] shadow-md;
+  @apply bg-sky-500/30 text-gray-700;
+  @apply p-[6vh] mb-[5vh];
+}
+
 
 .kana-controls {
   /* layout */
@@ -102,8 +112,13 @@ button:focus-visible {
   /* decoration */
 }
 
-.main-btn {
+.btn-main {
   @apply px-3 text-[0.8rem] py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-200;
+  @apply shadow-md;
+}
+
+.btn-small {
+    @apply text-xs my-[1vh];
 }
 
 

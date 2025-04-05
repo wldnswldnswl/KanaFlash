@@ -8,7 +8,7 @@ import {
     KATAKANA_MODE,
 } from "../constants/kanaFlash";
 import FlashCardControls from "../components/KanaControls";
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 
 export type KanaWord = {
     kana: string;
@@ -18,6 +18,7 @@ export type KanaWord = {
 
 export default function FlashCardPage() {
     const [searchParams] = useSearchParams();
+    const navigate = useNavigate();
     const mode = searchParams.get("mode");
 
     const [kanaWord, setKanaWordState] = useState<KanaWord>(() => ({
@@ -56,13 +57,17 @@ export default function FlashCardPage() {
         return filtered[index];
     };
 
+    const moveToMain = () => {
+        navigate("/main");
+    };
+
     return (
-        <div className="box py-8 px-4">
+        <div className="box">
             <div className="header my-2">
                 {mode === HIRAGANA_MODE ? '히라가나' : '가타카나'} 학습 모드
             </div>
 
-            <div>
+            <div className="content">
                 <KanaCard word={kanaWord} />
                 <FlashCardControls
                     onFlip={() =>
@@ -70,6 +75,10 @@ export default function FlashCardPage() {
                     }
                     onNext={setNextKana}
                 />
+                <button className='btn-small'
+                        onClick={moveToMain}>
+                    메인으로 돌아가기
+                </button>
             </div>
         </div>
     );

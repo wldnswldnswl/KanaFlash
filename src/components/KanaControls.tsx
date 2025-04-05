@@ -8,13 +8,13 @@ export default function FlashCardControls({ onFlip, onNext }: FlashCardControlsP
         <div className="kana-controls">
             <button
                 onClick={onFlip}
-                className="main-btn"
+                className="btn-main"
             >
                 뒤집기
             </button>
             <button
                 onClick={onNext}
-                className={"main-btn"}
+                className="btn-main"
             >
                 다음
             </button>
