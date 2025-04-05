@@ -1,5 +1,3 @@
-import React from 'react';
-
 type FlashCardProps = {
     word: {
         kana: string;

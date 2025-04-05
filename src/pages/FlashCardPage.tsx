@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import KanaCard from "../components/KanaCard";
 import {
     KATAKANA_LIST,
