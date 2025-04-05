@@ -7,7 +7,7 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<MainPage />} />
+                <Route path="/main" element={<MainPage />} />
                 <Route path="/flash" element={<FlashCardPage />} />
             </Routes>
         </Router>
