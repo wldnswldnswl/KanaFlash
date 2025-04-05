@@ -2,7 +2,7 @@
   "name": "kanaFlash",
   "short_name": "kanaFlash",
   "description": "Learn Japanese Kana with kanaFlash!\n This app helps you learn Hiragana and Katakana through flashcards and quizzes.",
-  "start_url": "/",
+  "start_url": "/main",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
