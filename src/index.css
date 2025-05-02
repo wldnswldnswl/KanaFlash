@@ -1,7 +1,13 @@
+/*@import "tailwindcss";*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  height: 100%;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -11,6 +17,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 a {
@@ -24,10 +31,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  display: block;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  min-width: 100vw; /* 최소 너비는 뷰포트의 100% */
+  min-height: 100vh; /* 최소 높이는 뷰포트의 100% */
 }
 
 h1 {
@@ -66,3 +73,60 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.box {
+  height: 100vh;
+  @apply py-8 px-4;
+}
+
+.header {
+  /* text */
+  @apply text-center font-bold text-[1rem] grid my-2;
+}
+
+.content {
+  /* layout */
+  @apply my-[10vh];
+
+  /* text */
+  @apply text-center font-bold text-[3rem];
+}
+
+.main-menu {
+  @apply grid grid-cols-1 gap-1;
+}
+
+.card {
+  /* decoration */
+  @apply rounded-lg bg-[#1a1a1a] shadow-md;
+  @apply bg-sky-500/30 text-gray-700;
+  @apply p-[6vh] mb-[5vh];
+}
+
+
+.kana-controls {
+  /* layout */
+  @apply flex justify-center items-center gap-2;
+
+  /* text */
+  /* decoration */
+}
+
+.btn-main {
+  @apply px-3 text-[0.8rem] py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-200;
+  @apply shadow-md;
+}
+
+.btn-small {
+    @apply text-xs my-[1vh];
+}
+
+
+/*
+  < template >
+  .component-name {
+         // layout
+         // text
+         // decoration
+  }
+*/
